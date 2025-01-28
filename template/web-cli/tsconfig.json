@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "es2020", // 或更高版本，取决于您的需求
+    "module": "node16", // 或使用 "nodenext" 如果您想要最新的Node.js ESM支持
+    "moduleResolution": "node",
+    // 其他选项...
+  },
+  "files": [],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    },
+    {
+      "path": "./tsconfig.app.json"
+    },
+    {
+      "path": "./tsconfig.vitest.json"
+    }
+  ]
+}
