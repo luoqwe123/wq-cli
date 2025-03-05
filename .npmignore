@@ -1,0 +1,3 @@
+# .npmignore
+template/web-cli/node_modules
+template/web-cli/node_modules/**/*

@@ -1,20 +1,23 @@
 {
   "name": "create-xqcli",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.ts",
   "bin": {
-    "create-xqcli": "dist/index.js"
+    "create-xqcli": "dist/index.cjs"
   },
+  "type": "module",
   "files": [
     "dist",
-    "template",
+    "template/web-cli/*",
+    "!template/web-cli/node_modules",
     "fonts"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "tsup --watch --sourcemap",
     "build": "tsup",
+    "pack":"pack --dry-run",
     "typecheck": "tsc --noEmit"
   },
   "keywords": [],
