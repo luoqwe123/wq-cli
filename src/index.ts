@@ -45,7 +45,10 @@ const bootstrap = async () => {
     const sourcePath = path.resolve(__dirname, "../template/web-cli");
     console.log("path1", sourcePath)
     // Copy files from sourcePath to targetPath
-    fs.cpSync(sourcePath, targetPath, { recursive: true });
+    fs.cpSync(sourcePath, targetPath, { 
+        recursive: true,
+        filter:(sourcePath)=> !sourcePath.includes('node_modules')
+     });
    
     // Update package.json
     // const packageJsonPath = path.resolve(targetPath, 'package.json');
