@@ -1,10 +1,10 @@
 {
   "name": "create-xqcli",
-  "version": "1.2.0",
+  "version": "1.4.0",
   "description": "",
-  "main": "index.ts",
+  "main": "src/index.ts",
   "bin": {
-    "create-xqcli": "dist/index.cjs"
+    "create-xqcli": "dist/index.mjs"
   },
   "type": "module",
   "files": [
@@ -15,21 +15,22 @@
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "tsup --watch --sourcemap",
-    "build": "tsup",
-    "pack":"pack --dry-run",
-    "typecheck": "tsc --noEmit"
+    "build": "rollup --config",
+    "pack": "pack --dry-run",
+    "typecheck": "tsc --noEmit",
+    "start": "node  src/index.js"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
-  "devDependencies": {
-    "@types/figlet": "^1.7.0",
-    "@types/prompts": "^2.4.9",
+  "dependencies": {
     "chalk": "^5.4.1",
     "figlet": "^1.8.0",
-    "prompts": "^2.4.2",
-    "tsup": "^8.3.5",
-    "typescript": "^5.7.3"
+    "fs-extra": "^11.3.0",
+    "prompts": "^2.4.2"
+  },
+  "devDependencies": {
+    "@rollup/plugin-terser": "^0.4.4",
+    "rollup": "^4.41.1"
   }
 }

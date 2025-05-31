@@ -54,4 +54,6 @@ const changeRouter = (url: string) => {
     color: aliceblue;
     border-radius: 5px;
 }
+
+
 </style>
